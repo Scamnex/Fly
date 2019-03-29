@@ -45,8 +45,8 @@ class Main extends PluginBase implements Listener {
              $settings = new Config($this->getDataFolder() . "messages.yml", Config::YAML); 
              $flyon = $settings->get("fly_on"); 
              $flyoff = $settings->get("fly_off");
-             $no_perm = $settings->get("no_perm")
-             $pvpfly = $settings->get("pvp_fly")
+             $no_perm = $settings->get("no_perm");
+             $pvpfly = $settings->get("pvp_fly");
            }else{
              $sender->sendMessage($no_perm);
              return false;
