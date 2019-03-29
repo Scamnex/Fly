@@ -30,7 +30,8 @@ class Main extends PluginBase implements Listener {
            return false;
          }
 
-         if(strtolower($command->getName()) === "fly"){
+           switch($command->getName()){
+           case "fly":
            if(!$sender->hasPermission("fly.use")){
              if(!$sender->isCreative()){
                $sender->setAllowFlight(true);
