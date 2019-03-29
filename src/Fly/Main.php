@@ -3,8 +3,6 @@
  *(C) Copyright by ChampNinjas
  */
 
-declare(strict_types=1);
-
 namespace Fly;
 
 use pocketmine\plugin\PluginBase;
