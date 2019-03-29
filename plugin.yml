@@ -9,3 +9,4 @@ commands:
     fly:
        description: Dadurch kannst du Fliegen!
        permission: fly.use
+       default: op
