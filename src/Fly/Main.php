@@ -39,7 +39,7 @@ class Main extends PluginBase implements Listener {
                $sender->setAllowFlight(false);
                $sender->setFlying(false);
                $sender->sendMessage($flyoff);
-             }else{
+             }
              $settings = new Config($this->getDataFolder() . "messages.yml", Config::YAML); 
              $flyon = $settings->get("fly_on"); 
              $flyoff = $settings->get("fly_off");
