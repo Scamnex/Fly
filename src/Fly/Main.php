@@ -16,6 +16,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat;
+use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener {
 	
