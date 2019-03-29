@@ -1,1 +1,17 @@
+# Fly ja ChampNinjas 2019
 
+---
+# Fly-On Nachricht 
+fly_on: "An"
+
+# Fly-off Nachricht
+fly_off: "Aus"
+
+# PvP-Fly Nachricht
+pvp_fly: "Aua"
+
+# Keine Permission
+no_perm: "Keine Rechte!"
+
+
+...
