@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener {
          $this->getLogger()->info("Plugin ist aktiviert");
          $this->saveResource("messages.yml");	}
 
-     public function onCommand(Command $command, CommandSender $sender, string $label, array $args) : bool{
+     public function onCommand(Command $command, CommandSender $sender, string $label, array $args) {
          if(!$sender instanceof Player){
            $sender->sendMessage("Benutze den Command InGame!");
            return false;
