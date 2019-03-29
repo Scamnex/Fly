@@ -1,0 +1,11 @@
+name: Fly
+main: Fly\Main
+version: 1.0.0
+api: [3.5.6, 4,0,0]
+author: Scamnex
+description: Fly Plugin für ChampNinjas
+
+commands:
+    fly:
+       description: Dadurch kannst du Fliegen!
+       permission: fly.use
