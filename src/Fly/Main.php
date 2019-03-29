@@ -3,12 +3,12 @@
  *(C) Copyright by ChampNinjas
  */
 
+declare(strict_types=1);
+
 namespace Fly;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use pocketmine\event\entity\EntityDamageEvent;
-use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
@@ -18,20 +18,18 @@ use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener {
 	
-     public const PREFIX = TextFormat::RED . "Fly" . TextFormat::WHITE . " > " . TextFormat::GOLD;
-	
-     public function onEnable(): void{
+     public function onEnable(){
          $this->getLogger()->info("Plugin ist aktiviert");
          $this->saveResource("messages.yml");	}
 
-     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool
+     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
          if(!$sender instanceof Player){
            $sender->sendMessage("Benutze den Command InGame!");
            return false;
          }
 
-           switch($command->getName()){
-           case "fly":
+           switch("$command->getName()){
+	   case "fly";
            if(!$sender->hasPermission("fly.use")){
              if(!$sender->isCreative()){
                $sender->setAllowFlight(true);
@@ -54,15 +52,5 @@ class Main extends PluginBase implements Listener {
         }
         return true;
     }
-	
-    public function onDamage(EntityDamageEvent $event) : void{
-        $entity = $event->getEntity();
-        if($entity instanceof Player){
-          if(!$entity->isCreative() && $entity->getAllowFlight()){
-            $entity->setFlying(false);
-            $entity->setAllowFlight(false);
-            $entity->sendMessage("$pvpfly");
-	  }
-        }
-     }
+  }
 }
