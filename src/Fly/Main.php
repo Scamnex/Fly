@@ -20,7 +20,7 @@ class Main extends PluginBase implements Listener {
 	
      public const PREFIX = TextFormat::RED . "Fly" . TextFormat::WHITE . " > " . TextFormat::GOLD;
 	
-     public function onEnable(){
+     public function onEnable(): void{
          $this->getLogger()->info("Plugin ist aktiviert");
          $this->saveResource("messages.yml");	}
 
